@@ -231,5 +231,8 @@ int main()
   // And printing everything as well.
   solve(best_theta1, 1.0f/best_theta2, true);
   
+  cout << std::fixed << std::setprecision(4);
+  cout << best_theta1 + 1.0f/best_theta2 << endl;
+
   return 0;
 }

@@ -6,7 +6,7 @@
 //          It outputs the inverse of the F function.
 //
 //  Before stress-testing, remember to set the main code to just output the
-//  inverse of the F function, with exactly 6 precision digits.
+//  inverse of the F function, with exactly 4 precision digits.
 
 #include <iostream>
 #include <vector>
@@ -33,12 +33,10 @@ int main()
     cin >> vprecision[i];
   
   
-  for(int i = 0; i < n; i++)
-  {
+  for(int i = 0; i < n; i++) {
     int x, inp;
     cin >> x;
-    while(x--)
-    {
+    while(x--) {
       cin >> inp;
       vtypes[i] |= (1<<inp);
     }
@@ -47,10 +45,9 @@ int main()
   double best_f_inverse = 10000000;
   
   do {
-    
     double precisionsum = 0;
     int mask_types = 0;
-    for(int i = 0; i < vmask.size(); i++)
+    for(int i = 0; i < n; i++)
     {
       if(vmask[i])
       {
@@ -64,7 +61,7 @@ int main()
   } while(next_permutation(vmask.begin(), vmask.end()));
   
   
-  cout << std::fixed << std::setprecision(6);
+  cout << std::fixed << std::setprecision(4);
   cout << best_f_inverse << endl;
   
   return 0;

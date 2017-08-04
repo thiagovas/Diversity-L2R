@@ -6,9 +6,9 @@ from random import randint
 from random import uniform
 
 def main():
-  n = randint(5, 20)
-  m = randint(2, 20)
-  k = randint(1, n)
+  n = randint(5, 12)
+  m = randint(2, 10)
+  k = randint(1, 5)
   
   
   print n, m, k
@@ -16,11 +16,15 @@ def main():
     print uniform(0, 1)
   
   for i in range(n):
-    x = randint(0, m)
-    stdout.write(str(x))
-    vtypes = [randint(0, 1) for j in range(x)]
+    vtypes = [randint(0, 1) for j in range(m)]
     
-    for j in range(x):
+    cnt = 0;
+    for j in range(m):
+      if vtypes[j] == 1:
+        cnt += 1
+    stdout.write(str(cnt))
+
+    for j in range(m):
       if vtypes[j] == 1:
         stdout.write(" " + str(j))
     stdout.write("\n")
