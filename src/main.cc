@@ -42,8 +42,8 @@ using namespace std;
 ILOSTLBEGIN
 
 #define EPS 1e-7
-#define MAXN 1000
-#define MAXM 2000
+#define MAXN 10000
+#define MAXM 20000
 #define MAX_BB_ITER 20000
 
 const int INF = 0x3f3f3f3f;
